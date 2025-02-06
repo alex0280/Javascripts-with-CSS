@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accident News | India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
+        header {
+            background: #d9534f;
+            color: white;
+            padding: 20px;
+        }
+
+        .dark-mode {
+            background: #222;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            background: #c9302c;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+
+        main {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .dark-mode footer {
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🚧 Latest Accident Report 🚧</h1>
+        <p id="date-time"></p>
+        
+    </header>
+
+    <main>
+        <article>
+            <h2>🔴 Major Highway Collision in Mumbai</h2>
+            <p class="author">By <b>Staff Reporter</b> | <span id="dynamic-date"></span></p>
+
+            <img src="https://media.istockphoto.com/id/93539281/photo/vehicle-accident.jpg?s=612x612&w=0&k=20&c=BvIiYCzwoCcrL64lhDnyYkXMf2Lye6i4w3mGK5gEg14=" alt="Accident Scene">
+
+            <p>In a tragic incident on the Mumbai-Pune Expressway, a massive car accident involving multiple vehicles resulted in severe injuries and fatalities. Authorities have reported at least <b>5 casualties</b> and several injured individuals.</p>
+
+            <h3>⚠ Key Highlights:</h3>
+            <ul>
+                <li><b>Location:</b> Mumbai-Pune Expressway</li>
+                <li><b>Time:</b> Late evening, rush hour</li>
+                <li><b>Vehicles Involved:</b> 4 cars and 1 truck</li>
+                <li><b>Cause:</b> Overspeeding & sudden brake failure</li>
+            </ul>
+
+            <h3>🚨 Witness Accounts</h3>
+            <p>Eyewitnesses reported that a speeding truck lost control, crashing into multiple vehicles ahead. "It was complete chaos," said one witness. Emergency services arrived within 15 minutes and started rescue operations immediately.</p>
+
+            <h3>🛑 Government Response</h3>
+            <p>The Transport Ministry has ordered a thorough investigation into the accident, emphasizing stricter road safety measures to prevent similar incidents.</p>
+
+            <h3>🛠 How to Stay Safe?</h3>
+            <ul>
+                <li>✔ Follow speed limits.</li>
+                <li>✔ Avoid using mobile phones while driving.</li>
+                <li>✔ Regularly maintain your vehicle.</li>
+                <li>✔ Wear seat belts at all times.</li>
+            </ul>
+
+            <p><b>Stay Safe & Drive Responsibly!</b></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Road Safety India | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            let now = new Date();
+            let dateTimeString = now.toLocaleString();
+            document.getElementById("date-time").innerText = "🕒 " + dateTimeString;
+            document.getElementById("dynamic-date").innerText = now.toDateString();
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>
